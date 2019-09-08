@@ -1,0 +1,264 @@
+
+body{
+	padding:10px;
+	margin: 0%;
+	background-color:#cc99ff;
+	max-width: 900px;
+	
+}
+textarea{
+	position: relative;
+	height: 200px;
+	width: 180px;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+	font-size: 20px;
+	border-top-left-radius:10px;
+	border-top-right-radius: 10px;
+	outline: none;
+}
+.total{
+	position:absolute;
+	left: 10px;
+	top:300px;
+	border-top: none;
+	background-color:;
+}
+.perhead{
+	position: absolute;
+	left: 190px;
+	top: 300px;
+}
+.final{
+	position: absolute;
+	left: 800px;
+	top: 280px;
+}
+
+.container{
+	margin-top: 40px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+}
+.headera{
+	position: absolute;
+	top: -5%;
+	
+
+}
+.container input{
+	position: relative;
+	top: 120px;
+	padding: 10px;
+	left: -190px;
+	margin: 10px
+	border-radius:5px;
+	background-color: blue;
+	color: white;
+	
+}
+#clocks{
+	position: absolute;
+	top: 500px;
+	background-color: #4d0000;
+	color: white;
+	height: 150px;
+	width: 400px;
+	
+	border-bottom-left-radius: 30px;
+	border-top-right-radius: 30px;
+	font-size: 80px;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+
+}
+span{
+	position: relative;
+	margin-top: 30px;
+	left: 30px;
+}
+#hour{
+	color: red;
+}
+#mins{
+	color: blue;
+}
+#secon{
+	color: green;
+}
+#Date{
+	position: absolute;
+	top: 700px;
+	width: 350px;
+	background-color: black;
+	color: yellow;
+	height: 80px;
+	font-size: 60px;
+	align-items: center;
+	border-radius: 20px;
+}
+#emoanish{
+	position: relative;
+	-webkit-transform:rotate(90deg);
+	background: yellow;
+	border-radius: 50%;
+	width: 60px;
+	height: 80px;
+	font-size: 50px;
+	padding-top: 10px;
+	border-color: red;
+	border-size:5px;
+	left: 930px;
+	top: 270px;
+}
+#emogita{
+	position: relative;
+	-webkit-transform:rotate(90deg);
+	background: yellow;
+	border-radius: 50%;
+	width: 60px;
+	height: 80px;
+	font-size: 50px;
+	padding-top: 10px;
+	border-color: red;
+	border-size:5px;
+	left: 930px;
+	top: 285px;
+}
+#emogajendra{
+	position: relative;
+	-webkit-transform:rotate(90deg);
+	background: yellow;
+	border-radius: 50%;
+	width: 60px;
+	height: 80px;
+	font-size: 50px;
+	padding-top: 10px;
+	border-color: red;
+	border-size:5px;
+	left: 930px;
+	top: 310px;
+}
+#emochanak{
+	position: relative;
+	-webkit-transform:rotate(90deg);
+	background: yellow;
+	border-radius: 50%;
+	width: 60px;
+	height: 80px;
+	font-size: 50px;
+	padding-top: 10px;
+	border-color: red;
+	border-size:5px;
+	left: 930px;
+	top: 330px;
+}
+#emoprabin{
+	position: relative;
+	-webkit-transform:rotate(90deg);
+	background: yellow;
+	border-radius: 50%;
+	width: 60px;
+	height: 80px;
+	font-size: 50px;
+	padding-top: 10px;
+	border-color: red;
+	border-size:5px;
+	left: 930px;
+	top: 355px;
+}
+#gita{
+	position: absolute;
+	left: 190px;
+	width: 180px;
+}
+#gajendra{
+	position: absolute;
+	left: 380px;
+
+}
+#chanak{
+	position: absolute;
+	left: 570px;
+}
+#prabin{
+	position: absolute;
+	left: 760px;
+}
+#totalanish{
+	position:absolute;
+	left: 1px;
+	top: 200px;
+	width:165px;
+	outline: none;
+	background-color: black;
+	color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+#totalgita{
+	position: absolute;
+	left: 191px;
+	top: 200px;
+	width: 165px;
+	outline: none;
+	background-color: black;
+	color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#totalgajendra{
+	position: absolute;
+	top: 200px;
+	left: 380px;
+	width: 165px;
+	background-color: black;
+	color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#totalchanak{
+	position: absolute;
+	top: 200px;
+	left: 570px;
+	width: 165px;
+	background-color: black;
+	color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#totalprabin{
+	position: absolute;
+	top: 200px;
+	left: 760px;
+	width: 165px;
+	background-color: black;
+	color: white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#gtotal,#perhead{
+	height: 30px;
+	background-color: black;
+	border:none;
+	font-family: italic;
+	color: white;
+	font-size: 15px;
+}
+#anishfinal ,#gitafinal, #gajendrafinal, #chanakfinal, #prabinfinal{
+	background-color: black;
+	border:none;
+	font-family: sans-serif;
+	color: white;
+	height: 30px;
+	font-size: 18px;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="housecalculator.css">
+	<meta charset="UTF-8">
+	<title>housecalculator</title>
+</head>
+<body>
+	<div class="container">
+		<textarea class="anish" placeholder="anish" id="anish"></textarea>
+		<input type="text" name="total" id="totalanish" disabled="">
+		<textarea class="gita" placeholder="gita" id="gita"></textarea>
+		<input type="text" name="total" id="totalgita" disabled="">
+		<textarea class="gajendra" placeholder="gajedra" id="gajendra"></textarea>
+		<input type="text" name="total" id="totalgajendra" disabled="">
+		<textarea class="chanak" placeholder="chanak" id="chanak"></textarea>
+		<input type="textarea" name="total" id="totalchanak" disabled="">
+		<textarea class="prabin" placeholder="prabin" id="prabin"></textarea>
+		<input type="text" name="total" id="totalprabin" disabled="">
+	</div>
+	<div class="total">
+		<h1 id="total">total</h1>
+		<input type="text" name="gtotal" id="gtotal" disabled="">
+	</div>
+	<div class="perhead">
+		<h1>Per Head</h1>
+		<input type="text" name="perhead" id="perhead" disabled="">
+	</div>
+	<div class="final">
+		<h1>anish</h1>
+		<input type="text" name="final" id="anishfinal" disabled="">
+		<h1>gita</h1>
+		<input type="text" name="final" id="gitafinal" disabled="">
+		<h1>gajendra</h1>
+		<input type="text" name="final" id="gajendrafinal" disabled="">
+		<h1>chanak</h1>
+		<input type="text" name="final" id="chanakfinal" disabled="">
+		<h1>parbin</h1>
+		<input type="text" name="final" id="prabinfinal" disabled="">
+	</div>
+	<div id="emoanish"></div>
+	<div id="emogita"></div>
+	<div id="emogajendra"></div>
+	<div id="emochanak"></div>
+	<div id="emoprabin"></div>
+	<div id="clocks">
+		<span id="hour"></span>
+		<span id="mins"></span>
+		<span id="secon"></span>
+	</div>
+	<div id="Date"></div>
+	<script type="text/javascript">
+		//function to make the total expenses of each person
+		function expanish(){
+			var num =document.getElementById('anish').value;
+			var total = eval(document.getElementById('anish').value);
+			document.getElementById('totalanish').value =total;
+		}
+		setInterval(expanish,100);
+		function expgita(){
+			var num =document.getElementById('gita').value;
+			var total = eval(document.getElementById('gita').value);
+			document.getElementById('totalgita').value =total;
+		}
+		setInterval(expgita,100);
+		function expgajendra(){
+			var num =document.getElementById('gajendra').value;
+			var total = eval(document.getElementById('gajendra').value);
+			document.getElementById('totalgajendra').value =total;
+		}
+		setInterval(expgajendra,100);
+		function expchanak(){
+			var num =document.getElementById('chanak').value;
+			var total = eval(document.getElementById('chanak').value);
+			document.getElementById('totalchanak').value =total;
+		}
+		setInterval(expchanak,100);
+		function expprabin(){
+			var num =document.getElementById('prabin').value;
+			var total = eval(document.getElementById('prabin').value);
+			document.getElementById('totalprabin').value =total;
+		}
+		setInterval(expprabin,100);
+		//to make total expenses of house
+		function totalexp(){
+			var anish =(document.getElementById('totalanish').value)*1;
+			var gita = (document.getElementById('totalgita').value)*1;
+			var gajendra = (document.getElementById('totalgajendra').value)*1;
+			var chanak = (document.getElementById('totalchanak').value)*1;
+			var prabin = (document.getElementById('totalprabin').value)*1;
+			var result=anish+gita+gajendra+chanak+prabin;
+			document.getElementById('gtotal').value = result;
+		}
+		setInterval(totalexp,100);
+		//progamming or per head
+		function perhead(){
+			var total= document.getElementById('gtotal').value;
+			var result = total/5;
+			document.getElementById('perhead').value = result;
+		}
+		setInterval(perhead,100);
+		//programing for how much pay /how much take 
+		function anishhead(){
+			var totalanishexp = document.getElementById('totalanish').value;
+			var perhead = document .getElementById('perhead').value;
+			var result = totalanishexp - perhead;
+			document.getElementById('anishfinal').value = result;
+		}
+		setInterval(anishhead,100);
+		function gitahead(){
+			var totalanishexp = document.getElementById('totalgita').value;
+			var perhead = document .getElementById('perhead').value;
+			var result = totalanishexp - perhead;
+			document.getElementById('gitafinal').value = result;
+		}
+		setInterval(gitahead,100);
+		function gajendrahead(){
+			var totalanishexp = document.getElementById('totalgajendra').value;
+			var perhead = document .getElementById('perhead').value;
+			var result = totalanishexp - perhead;
+			document.getElementById('gajendrafinal').value = result;
+		}
+		setInterval(gajendrahead,100);
+		function chanakhead(){
+			var totalanishexp = document.getElementById('totalchanak').value;
+			var perhead = document .getElementById('perhead').value;
+			var result = totalanishexp - perhead;
+			document.getElementById('chanakfinal').value = result;
+		}
+		setInterval(chanakhead,100);
+		function prabinhead(){
+			var totalanishexp = document.getElementById('totalprabin').value;
+			var perhead = document .getElementById('perhead').value;
+			var result = totalanishexp - perhead;
+			document.getElementById('prabinfinal').value = result;
+		}
+		setInterval(prabinhead,100);
+		//promming of clock
+		function clock(){
+			var time = new Date();
+			var hour =time.getHours();
+			var min = time.getMinutes();
+			var sec = time.getSeconds();
+			var day = time.getDate();
+			var month = time.getMonth();
+			var year = time.getFullYear();
+			//document.getElementById('clocks').innerHTML= hour +":"+min + ":" +sec;
+			document.getElementById('hour').innerHTML=hour +":" ;
+			document.getElementById('mins').innerHTML=min +":" ;
+			document.getElementById('secon').innerHTML=sec;
+			document.getElementById('Date').innerHTML=day +"/"+ month +"/" + year;
+		}
+		setInterval(clock,500);
+		//progamming for emoanish
+		function emo(){
+			var num =document.getElementById('anishfinal').value;
+			
+			var emo = ":(";
+			if(num<0){
+				document.getElementById('emoanish').innerHTML=emo;
+				}
+			else{
+				document.getElementById('emoanish').innerHTML=":)";
+				}
+		}
+        setInterval(emo,100);
+        //progamming for emogita
+        function emo1(){
+			var num =document.getElementById('gitafinal').value;
+			
+			var emo = ":(";
+			if(num<0){
+				document.getElementById('emogita').innerHTML=emo;
+				}
+			else{
+				document.getElementById('emogita').innerHTML=":)";
+				}
+		}
+        setInterval(emo1,100);
+        //programming for emojagendra
+        function emo2(){
+			var num =document.getElementById('gajendrafinal').value;
+			
+			var emo = ":(";
+			if(num<0){
+				document.getElementById('emogajendra').innerHTML=emo;
+				}
+			else{
+				document.getElementById('emogajendra').innerHTML=":)";
+				}
+		}
+        setInterval(emo2,100);
+        //progamming for emochanak
+        function emo3(){
+			var num =document.getElementById('chanakfinal').value;
+			
+			var emo = ":(";
+			if(num<0){
+				document.getElementById('emochanak').innerHTML=emo;
+				}
+			else{
+				document.getElementById('emochanak').innerHTML=":)";
+				}
+		}
+        setInterval(emo3,100);
+        //progamming for emoprabin
+        function emo4(){
+			var num =document.getElementById('prabinfinal').value;
+			
+			var emo = ":(";
+			if(num<0){
+				document.getElementById('emoprabin').innerHTML=emo;
+				}
+			else{
+				document.getElementById('emoprabin').innerHTML=":)";
+				}
+		}
+        setInterval(emo4,100);
+	</script>
+
+</body>
+</html>
